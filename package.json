@@ -7,7 +7,8 @@
     "lint": "npx hardhat check",
     "build": "npx hardhat compile",
     "prepublishOnly": "yarn build",
-    "pub": "yarn publish --access public"
+    "pub": "yarn publish --access public",
+    "fantom_testnet": "npx hardhat run --network fantom_testnet scripts/wrapper/deploy.js"
   },
   "files": [
     "build/contracts/*json",
@@ -26,6 +27,7 @@
     "@openzeppelin/test-helpers": "^0.5.11",
     "chai": "^4.3.4",
     "dotenv": "^10.0.0",
+    "envfile": "^6.17.0",
     "elliptic-solidity": "^1.0.0",
     "ethereum-waffle": "^3.3.0",
     "ethers": "^5.1.4",

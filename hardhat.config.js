@@ -39,19 +39,25 @@ module.exports = {
       url: `https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161`,
       tags: ["test", "legacy", "use_root"],
       chainId: 3,
-      accounts: ["6354e35a2c2da44f17508b82f73d607217a4f2652e4d9f8e11356c1f6a81eae3"],
+      accounts: [process.env.PRIVATE_KEY],
     },
     fantom: {
       url: `https://rpcapi.fantom.network`,
       tags: ["test", "legacy", "use_root"],
       chainId: 250,
-      accounts: ["6354e35a2c2da44f17508b82f73d607217a4f2652e4d9f8e11356c1f6a81eae3"],
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    fantom_testnet: {
+      url: `https://rpc.testnet.fantom.network/`,
+      tags: ["test", "legacy", "use_root"],
+      chainId: 4002,
+      accounts: [process.env.PRIVATE_KEY],
     },
     mainnet: {
       url: `https://mainnet.infura.io/v3/${process.env.INFURA_ID}`,
       tags: ["legacy", "use_root"],
       chainId: 1,
-      accounts: real_accounts,
+      accounts: [process.env.PRIVATE_KEY],
     }
   },
   mocha: {
